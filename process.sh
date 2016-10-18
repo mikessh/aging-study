@@ -1,5 +1,6 @@
 for i in {2..6}
 do
+   # barcodes can be found in the repository root folder
    java -Xmx40G -jar migec.jar Checkout -cute age${i}_barcodes.txt age${i}_R1.fastq.gz age${i}_R2.fastq.gz checkout/
    cp checkout/checkout.filelist.txt checkout_logs/age${i}_checkout.filelist.txt
    cp checkout/checkout.log.txt checkout_logs/age${i}_checkout.log.txt
@@ -22,5 +23,6 @@ cd assemble
 for f in *.fastq
 do
    s=${f%_R2.t2.cf.fastq};
-   mitcr -pset ../age-pset -report ../cdrblast/mitcr.log.txt $f ../cls/$s.cls;
+   # age-pset.xml can be found in the repository root folder
+   mitcr -pset ../age-pset.xml -report ../cdrblast/mitcr.log.txt $f ../cls/$s.cls;
 done

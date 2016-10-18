@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<parameters>
+  <format>1.0</format>
+  <exportedByVersion>1.0.3</exportedByVersion>
+  <gene>TRB</gene>
+  <species>HomoSapiens</species>
+  <qualityInterpretationStrategy>
+    <illumina>20</illumina>
+  </qualityInterpretationStrategy>
+  <cdr3Extractor>
+    <v>
+      <extensionDirections>both</extensionDirections>
+      <seedFrom>-4</seedFrom>
+      <seedTo>1</seedTo>
+      <minAlignmentMatches>12</minAlignmentMatches>
+      <lengthTolerance>3</lengthTolerance>
+    </v>
+    <j>
+      <extensionDirections>insideCDR3</extensionDirections>
+      <seedFrom>-3</seedFrom>
+      <seedTo>2</seedTo>
+      <minAlignmentMatches>7</minAlignmentMatches>
+      <lengthTolerance>2</lengthTolerance>
+    </j>
+    <d>
+      <minLength>2</minLength>
+      <searchForRC />
+    </d>
+    <upperCDR3LengthThreshold>100</upperCDR3LengthThreshold>
+    <lowerCDR3LengthThreshold>10</lowerCDR3LengthThreshold>
+    <strand>both</strand>
+    <includeCysPhe />
+  </cdr3Extractor>
+  <cloneGenerator>
+    <segmentInformationAggregationFactor>0.15</segmentInformationAggregationFactor>
+    <maxErrorsInBadPoints>3</maxErrorsInBadPoints>
+    <proportionalMapping />
+  </cloneGenerator>
+  <clusterizer>
+    <type>oneMismatch</type>
+    <maxClusterizationRatio>0.1</maxClusterizationRatio>
+  </clusterizer>
+</parameters>
+

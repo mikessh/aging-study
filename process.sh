@@ -24,5 +24,5 @@ for f in *.fastq
 do
    s=${f%_R2.t2.cf.fastq};
    # age-pset.xml can be found in the repository root folder
-   mitcr -pset ../age-pset.xml -report ../cdrblast/mitcr.log.txt $f ../cls/$s.cls;
+   mitcr -pset ../age-pset.xml -report ../cdrblast/mitcr.log.txt $f ../out/$s.txt;
 done

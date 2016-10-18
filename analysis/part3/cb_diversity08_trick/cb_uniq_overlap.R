@@ -1,0 +1,12 @@
+require(ggplot2); require(lsr)
+df <- read.table("table.txt",header=TRUE)
+df$age_grp_2<-factor(df$age_grp_2, levels = c("CB","(1,25]","(25,50]","(50,75]","(75,103]"))
+df$A<-log10(df$A)
+pdf("cb_unique_overlap.pdf")
+ggplot(df, aes(x=age_grp_2,group=age_grp_2,y=A))+geom_boxplot(outlier.shape=NA)+
+theme_bw()+xlab("Age group")+scale_y_continuous(name = "Normalize unique clonotype overlap", limits=c(-4.65,-4.2))
+dev.off()
+a<-aov(A ~ age_grp_2, df)
+summary(a)
+etaSquared(a)
+pairwise.t.test(df$A, df$age_grp_2, p.adjust.method = "holm")

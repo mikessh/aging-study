@@ -6,7 +6,6 @@ A3-i107.txt	A3-i107	F	39	p4-F39
 A3-i110.txt	A3-i110	F	34	p5-F34
 A3-i145.txt	A3-i145	F	86	p6-F86
 A3-i150.txt	A3-i150	F	87	p7-F87
-## Masked samples: technical replicates / unconfirmed metadata
 #A3-i151.txt	A3-i151	F	87	p7-F87
 A2-i129.txt	A2-i129	M	11	p9-M11
 A2-i131.txt	A2-i131	M	9	p10-M9

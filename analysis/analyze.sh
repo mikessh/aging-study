@@ -1,0 +1,1 @@
+cd part2Rscript ageplot.Rcd ../part3java -Xmx4G -jar ~/Programming/vdjtools/target/vdjtools-1.0-SNAPSHOT.jar BatchIntersectPairPlot -f age -n -l label -m F2 age.batch_intersect_aa.txt age.F2Rscript clustplot.R
